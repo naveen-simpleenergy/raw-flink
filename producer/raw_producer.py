@@ -1,17 +1,16 @@
 import json
 from logger import log
 from cantools.database.namedsignalvalue import NamedSignalValue
-from .base_producer import KafkaProducer
-
-from utils.message_payload import MessagePayload
+from .base_producer import CustomKafkaProducer
+from utils import MessagePayload
 import logging
 
-class KafkaCanDataProducer(KafkaProducer):
+class KafkaCanDataProducer(CustomKafkaProducer):
     """
     Kafka producer for standard data messages, handling serialization and topic-specific production.
     """
-    def __init__(self, brokers, topic_path):
-        super().__init__(brokers)
+    def __init__(self, config, topic_path):
+        super().__init__(config)
         
         with open(topic_path, 'r') as file:
             self.topics = json.load(file)

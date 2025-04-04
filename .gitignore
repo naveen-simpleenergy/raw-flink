@@ -9,6 +9,7 @@ __pycache__/
 # Environments
 dbc_files/
 .env
+.venv
 myenv/
 env/
 ENV/

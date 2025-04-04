@@ -30,7 +30,6 @@ class CustomKafkaProducer():
             sasl_plain_password=config['sasl_password'],
         )
 
-
     def send_data(self, data, topic, key=None):
         try:
             encoded_data = json.dumps(data).encode('utf-8')
