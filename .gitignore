@@ -1,0 +1,24 @@
+logs/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+dbc_files/
+.env
+myenv/
+env/
+ENV/
+env.bak/
+venv.bak/
+scripts/Table_Json
+scripts/TEST_Table_Json
+scripts/New_Schema_TEST
+scripts/Table_Template_TEST
+scripts/Table_json_stage
+
+#testing
+*.ipynb
